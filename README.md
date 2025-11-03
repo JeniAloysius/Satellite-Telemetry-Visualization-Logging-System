@@ -1,4 +1,3 @@
-
 # Satellite Telemetry Visualization & Logging System
 
 A real-time ISS telemetry tracker that logs live telemetry and visualizes the ground track on a world map.
@@ -17,4 +16,3 @@ Python, Pandas, Skyfield, VPython, Matplotlib, Cartopy, Requests
 2. Install deps: `pip install -r requirements.txt`
 3. Run tracker: `python iss_tracker_final.py`
 4. Run map viewer (separate terminal): `python map_viewer.py`
-
