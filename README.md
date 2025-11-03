@@ -9,86 +9,106 @@
 
 ---
 
-## 🚀 Overview
+# 🛰️ ISS Live Tracker — Real-Time Space Visualization
 
-The **Satellite Telemetry Visualization & Logging System** is a Python-based application designed to visualize and monitor real-time satellite data streams.  
-It provides an interactive GUI for plotting altitude, velocity, and other telemetry metrics, while also logging data for later analysis.
-
-This project demonstrates how **AI & data science techniques** can be used in **space research and operations**, bridging analytical modeling and visualization.
+A real-time ISS (International Space Station) tracker that simulates satellite telemetry, visualizes its orbit, and plots the ground track dynamically on a 3D globe 🌍 and 2D map 🗺️.  
+Built using **Python**, **Plotly**, and **Dash**.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-- 📡 **Real-Time Telemetry Parsing** – Simulates incoming satellite data streams.  
-- 📊 **Dynamic Visualization** – Live plotting using Matplotlib integrated with Tkinter GUI.  
-- 💾 **Data Logging** – Saves telemetry data in structured CSV files for analysis.  
-- 🧭 **Orbit Parameter Display** – Altitude, velocity, and timestamp tracking in real time.  
-- 🌐 **Modular Architecture** – Easily extendable for integration with APIs like CelesTrak or NORAD.
-
----
-
-## 🧠 Tech Stack
-
-| Component | Technology Used |
-|------------|----------------|
-| Language | Python |
-| GUI | Tkinter |
-| Plotting | Matplotlib |
-| Data Handling | Pandas, NumPy |
-| Logging | CSV-based persistent storage |
-
----
-
-## 🧩 Project Structure
-📁 solar_flare_forecaster/
-│
-├── main.py # Entry point for GUI and visualization
-├── telemetry_generator.py # Simulates satellite data
-├── telemetry_plotter.py # Handles Matplotlib live plotting
-├── data_logger.py # Logs telemetry to CSV
-├── utils.py # Helper functions
-├── requirements.txt # Dependencies
-└── README.md # You’re reading it :)
-
+✅ Real-time ISS position and velocity tracking  
+✅ 3D globe visualization of orbit  
+✅ 2D map viewer for ground track and path  
+✅ Automatic telemetry logging (CSV format)  
+✅ Modular architecture — easy to extend for other satellites  
+✅ Simple, clean UI  
 
 ---
 
 ## ⚙️ Installation
 
+Make sure you have **Python 3.9+** installed.  
+Clone the repository and install the dependencies:
+
 bash
-# Clone the repository
-git clone https://github.com/JeniAloysius/Satellite-Telemetry-Visualization-Logging-System.git
-
-# Navigate into the project
-cd Satellite-Telemetry-Visualization-Logging-System
-
-# Create a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # or on Windows: venv\Scripts\activate
-
-# Install dependencies
+git clone https://github.com/<your-username>/ISS-Live-Tracker.git
+cd ISS-Live-Tracker
 pip install -r requirements.txt
-
 🧭 Usage
-python main.py
+Run the real-time ISS simulation and visualization using the following commands:
 
-Once the app launches:
-Click Start Simulation to generate satellite data.
-Watch live telemetry plots update in real-time.
-Data is automatically logged to data_logs/telemetry.csv.
+🛰️ Step 1 — Start the simulation engine
+This script generates live satellite telemetry and updates position data dynamically. 
 
+bash
+python ISS_tracker_final.py
+
+Once launched, it will:
+
+Generate real-time ISS position and velocity.
+
+Log telemetry into a timestamped .csv file inside the /data folder.
+
+🌍 Step 2 — Launch the interactive globe & map viewer
+To visualize the real-time orbit and ground track:
+
+bash
+python map_viewer.py
+You’ll see:
+
+A 2D map showing the ground path traced dynamically.
+
+📊 Sample Output
+Time (UTC)	Latitude	Longitude	Altitude (km)	Velocity (km/s)
+2025-11-03T10:41:00Z	45.12	-73.22	420.55	7.66
+2025-11-03T10:42:00Z	46.09	-72.95	420.58	7.66
+2025-11-03T10:43:00Z	47.05	-72.68	420.61	7.66
+
+🗂️ CSV logs are saved automatically inside the /data directory for later analysis.
+
+🧠 Project Structure
+
+Copy code
+ISS-Live-Tracker/
+├── ISS_tracker_final.py     # Core simulation & telemetry generator
+├── map_viewer.py            # Visualization dashboard (3D + 2D map)
+├── data/                    # Orbit/TLE or sample data
+     ├── iss_telemetry.csv   # Telemetry CSV outputs
+├── requirements.txt         # Dependencies
+└── README.md                # You are here!
+🧩 Tech Stack
+Python
+
+Plotly / Dash
+
+Pandas
+
+SGP4
+
+Matplotlib
+
+📈 Future Improvements
+Integrate real-time NASA / Celestrak API
+
+Add multi-satellite support
+
+Include anomaly detection using AI models
+
+Export orbit visualizations as video
+
+🪐 Credits
+Developed by Jenifer Aloysius
+For educational and research purposes in Space Situational Awareness & Satellite Tracking.
 
 📜 License
-
-This project is released under the MIT License.
+This project is licensed under the MIT License — feel free to use, modify, and share.
 
 👩‍🚀 Author
 
 Jenifer Aloysius
 🎓 B.Tech in AI & Data Science | Passionate about SpaceTech & Research
 🌌 Exploring how AI can enhance satellite monitoring and prediction
-🔗 LinkedIn
- · GitHub
 
 ⭐ If you found this project interesting, consider giving it a star! It helps support future open-source work in space tech and AI.
