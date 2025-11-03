@@ -81,6 +81,9 @@ Timestamp (UTC)	Latitude	Longitude	Altitude (km)	Velocity (km/s)
 
 2025-11-03 10:42:00	     46.09	     -72.95	     420.58	     7.66
 
+A 3D VPython globe that simulates and visualizes the ISS orbit in real-time.
+
+A 2D Cartopy map that displays the ISS ground track as it moves around the Earth.
 
 Telemetry logs are automatically saved in the /data folder.
 
