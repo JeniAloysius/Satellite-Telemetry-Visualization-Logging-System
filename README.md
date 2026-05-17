@@ -12,6 +12,9 @@
 A real-time ISS telemetry tracker that simulates and visualizes the International Space Station’s orbit in **3D** and **2D** views.  
 Built with **Skyfield**, **VPython**, **Pandas**, and **Cartopy**, this system computes live ISS position data, visualizes its orbit, and logs telemetry for analysis.
 
+## Demo
+
+Screenshots and working proof of the system are available in the `demo/` folder.
 ---
 
 ## ⚙️ Features
